@@ -1,0 +1,6 @@
+env/
+projet/settings/production.py
+__pycache__
+.bashrc_PROJEX
+media
+.coverage
