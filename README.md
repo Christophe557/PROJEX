@@ -9,3 +9,5 @@ Creation : 26/06/2021
 Initialisation : 28/06/2021
     templates : base.html, index.html
                 vue : index
+
+Tag v0.0.1 :    28/06/2021
