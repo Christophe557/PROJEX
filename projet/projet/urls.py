@@ -17,16 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path, include
 from django.conf import settings					
-from app import views
+from apps.app_1 import views as views_1
+from app_2 import views as views_2
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'^$', views.index, name='index'),
+    re_path(r'^app_1/', include('app_1.urls', namespace='app_1')),
+    re_path(r'^app_2/', include('app_2.urls', namespace='app_2')),
+    re_path(r'^$', views_1.index, name='index'),
 ]
 
-# if settings.DEBUG:
-#     import debug_toolbar
-# 
-#     urlpatterns = [
-#             re_path(r'^__debug__/', include(debug_toolbar.urls)),
-#             ] + urlpatterns
+if settings.DEBUG:
+    import debug_toolbar
+             
+    urlpatterns = [
+            re_path(r'^__debug__/', include(debug_toolbar.urls)),
+            ] + urlpatterns

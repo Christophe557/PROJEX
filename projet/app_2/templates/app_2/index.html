@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+    {% load static %}
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'app_2/css/appstyle.css' %}" />
+    <h1> ça marche : titre en vert </h1>
+    <p> c'est l'application app, vue index </p>
+    <a href="{% url 'app_2:listing' %}" class='bouton'>aller au listing</a>
+{% endblock %}
+

@@ -11,3 +11,17 @@ Initialisation : 28/06/2021
                 vue : index
 
 Tag v0.0.1 :    28/06/2021
+
+
+    Administration : 
+            url       : http://127.0.0.1/admin/
+            superuser : chvellen
+            email     : support@ecosketch.fr
+            pwd       : 0000
+
+Tag v0.0.2 : 30/06/2021
+    django toolbar, apps/app_1, app_2, tests
+
+
+
+

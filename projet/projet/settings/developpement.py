@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+import sys
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,6 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
+# pour trouver le chemin des applis (sinon ça marche pas) :	
+APPS_DIR = os.path.join(BASE_DIR, 'apps')			
+sys.path.insert(1, APPS_DIR)
 
 # Application definition
 
@@ -39,8 +43,9 @@ INSTALLED_APPS = [
     # app nécessaire pour gérer les fichiers statiques (aller les 
     # chercher dans les dir préfixées STATIC_URL)
     'django.contrib.staticfiles',
-#    'debug_toolbar',
-    'app',
+    'debug_toolbar',
+    'apps.app_1',
+    'app_2',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-#    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'projet.urls'
