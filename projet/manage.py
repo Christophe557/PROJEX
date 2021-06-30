@@ -9,6 +9,13 @@ def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'projet.settings')
 
     from projet import settings
+    
+    print(" --- PYTHON PATH --- ")
+    for path in sys.path:
+        print(f' -> {path}')
+    print(" ------------------- ")
+    print()
+
     print('BASE_DIR = {}'.format(settings.BASE_DIR))
     print('TEMPLATES = {}'.format(settings.TEMPLATES))
 
