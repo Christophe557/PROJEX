@@ -1,10 +1,11 @@
 from django.test import RequestFactory
 from django.urls import reverse
-from apps.app_1 import views
+from app_1 import views
 from mixer.backend.django import mixer
 import pytest
 
 
+@pytest.mark.django_db
 class TestViews:
 
     def test_index(self):

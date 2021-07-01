@@ -1,5 +1,5 @@
 from django.shortcuts import render
-#from .models import Article
+from .models import Article
 
 def index(request):
     context = {}
@@ -7,11 +7,11 @@ def index(request):
 
 
 def listing(request):
- #   articles = Article.objects.all()
+    articles = Article.objects.all()
     titre_page = "TOUS LES ARTICLES"
 
     context = {
- #           'articles': articles,
+            'articles': articles,
             'titre_page': titre_page
             }
 

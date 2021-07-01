@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path, include
 from django.conf import settings					
-from apps.app_1 import views as views_1
+from app_1 import views as views_1
 from app_2 import views as views_2
 
 urlpatterns = [

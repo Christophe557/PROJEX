@@ -1,12 +1,12 @@
 from django.db import models
 
 
-class Article(models.Model):
+class Contenu(models.Model):
 
     titre = models.CharField(max_length=100)
 
     class Meta:
-        verbose_name = "article"
+        verbose_name = "contenu"
     def __str__(self):
         return self.titre
 
