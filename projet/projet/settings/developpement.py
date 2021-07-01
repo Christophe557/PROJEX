@@ -14,6 +14,7 @@ import sys
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+# c'est le chemin absolu /home/chvellen/DJ-DEMO/local/PROJEX/projet/
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
@@ -28,7 +29,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
-# pour trouver le chemin des applis (sinon ça marche pas) :	
+# pour trouver le chemin des applis (sinon ça marche pas) :
+# c'est le chemin absolu /home/chvellen/DJ-DEMO/local/PROJEX/projet/apps/
+# comme ça on peut importer directement les modules des apps :
+# pas besoin de faire:   from apps.app_1 import views
+# on peut faire:         from app_1 import views
 APPS_DIR = os.path.join(BASE_DIR, 'apps')			
 sys.path.insert(1, APPS_DIR)
 
@@ -44,7 +49,7 @@ INSTALLED_APPS = [
     # chercher dans les dir préfixées STATIC_URL)
     'django.contrib.staticfiles',
     'debug_toolbar',
-    'apps.app_1',
+    'app_1',
     'app_2',
 ]
 

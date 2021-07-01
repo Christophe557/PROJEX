@@ -1,14 +1,14 @@
 from django.shortcuts import render
-from .models import Article
+from .models import Contenu
 
 
 
 def listing(request):
-    articles = Article.objects.all()
-    titre_page = "TOUS LES ARTICLES"
+    contenus = Contenu.objects.all()
+    titre_page = "TOUS LES CONTENUS"
 
     context = {
-            'articles': articles,
+            'contenus': contenus,
             'titre_page': titre_page
             }
 

@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Article
+from .models import Contenu
 
-@admin.register(Article)
-class ArticleAdmin(admin.ModelAdmin):
-    # affichage des articles
+@admin.register(Contenu)
+class Contenu(admin.ModelAdmin):
+    # affichage des contenus
 
     # définition d'une barre de recherche et de filtre sur les champs
     search_fields = ['titre']

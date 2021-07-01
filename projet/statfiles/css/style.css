@@ -1,6 +1,25 @@
-body
+main
 {
     background-color: #def0ba;
-    color:blue;
+    color: #35382e;
+    margin: 0;
+    padding-left: 50px;
+    height:300px;
 
+}
+
+header
+{
+    background-color: #aff708;
+    color:blue;
+    margin: 0;
+    padding-left: 20px;
+}
+
+footer
+{
+    background-color: #577a11;
+    color: white;
+    margin: 0;
+    padding-left: 20px;
 }

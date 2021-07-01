@@ -3,11 +3,11 @@
 {% block content %}
 
     <link rel="stylesheet" href="{% static 'app_2/css/appstyle.css' %}" />
-    <h2>titre en rose</h2>
+    <h2>titre en violet - app_2.listing.html</h2>
     <div class='text'>
         <h3>{{ titre_page }}</h3>
-        {% for article in articles %}
-            <p>{{ article.titre }}</p>
+        {% for contenu in contenus %}
+            <p>{{ contenu.titre }}</p>
         {% endfor %}
     </div>
     <a href="{% url 'index' %}" class='bouton'>RETOUR</a>
